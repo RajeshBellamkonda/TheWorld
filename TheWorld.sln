@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{748A3CAC-6E4D-4769-8FB9-584E4D36E8F1}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		WE-browsers.xml = WE-browsers.xml
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TheWorld", "src\TheWorld\TheWorld.xproj", "{D4DDB814-69A6-44E3-AAA4-47D0760005F5}"
