@@ -12,6 +12,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "MailSettings__ToAddress": "gates@gates.org",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
