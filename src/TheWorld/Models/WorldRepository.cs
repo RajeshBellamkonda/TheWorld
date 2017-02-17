@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,37 @@ namespace TheWorld.Models
             _context = context;
         }
 
+        public void AddStop(string tripName, Stop stopEntity)
+        {
+            var trip = GetTripByName(tripName);
+            if (trip != null)
+            {
+                trip.Stops.Add(stopEntity);
+                _context.Stops.Add(stopEntity);
+            }
+        }
+
+        public void AddTrip(Trip trip)
+        {
+            _context.Add(trip);
+        }
+
         public IEnumerable<Trip> GetAllTrips()
         {
             return _context.Trips.ToList();
         }
 
+        public Trip GetTripByName(string tripName)
+        {
+            return _context.Trips
+                .Include(t => t.Stops)
+                .Where(t => t.Name.ToLower() == tripName.ToLower())
+                .FirstOrDefault();
+        }
 
+        public async Task<bool> SaveChangesAsync()
+        {
+            return (await _context.SaveChangesAsync()) > 0;
+        }
     }
 }
