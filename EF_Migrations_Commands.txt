@@ -1,0 +1,23 @@
+Alt+ Space (To bring up commandline)
+
+r:\gitprojects\theworld\src\theworld>dotnet ef migrations add InitialDatabase
+Project theworld (.NETCoreApp,Version=v1.0) will be compiled because Input items removed from last build
+Compiling theworld for .NETCoreApp,Version=v1.0
+Compilation succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time elapsed 00:00:12.6473738
+
+Done. To undo this action, use 'dotnet ef migrations remove'
+
+r:\gitprojects\theworld\src\theworld>dotnet ef database update
+Project theworld (.NETCoreApp,Version=v1.0) will be compiled because Input items added from last build
+Compiling theworld for .NETCoreApp,Version=v1.0
+Compilation succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time elapsed 00:00:10.6826457
+
+Done.
+
+r:\gitprojects\theworld\src\theworld>
