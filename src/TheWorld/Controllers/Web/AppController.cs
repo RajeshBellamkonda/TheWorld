@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -26,6 +27,12 @@ namespace TheWorld.Controllers.Web
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult Trips()
+        {
             try
             {
                 var data = _repository.GetAllTrips();
@@ -36,8 +43,8 @@ namespace TheWorld.Controllers.Web
                 _logger.LogError($"Failed tp get trips in Index: {ex.Message}");
                 return Redirect("/error");
             }
-
         }
+
         public IActionResult Contact()
         {
             return View();
