@@ -1,0 +1,34 @@
+
+R:\GitProjects\TheWorld\src\TheWorld>dotnet ef migrations list
+Project TheWorld (.NETCoreApp,Version=v1.0) will be compiled because Input items added from last build
+Compiling TheWorld for .NETCoreApp,Version=v1.0
+Compilation succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time elapsed 00:00:32.0630621
+
+20170217130922_InitialDatabase
+
+R:\GitProjects\TheWorld\src\TheWorld>dotnet ef migrations add AddingIdentity
+Project TheWorld (.NETCoreApp,Version=v1.0) was previously compiled. Skipping compilation.
+Done. To undo this action, use 'dotnet ef migrations remove'
+
+R:\GitProjects\TheWorld\src\TheWorld>dotnet ef migrations add IdentityClasses
+Project TheWorld (.NETCoreApp,Version=v1.0) will be compiled because Input items added from last build
+Compiling TheWorld for .NETCoreApp,Version=v1.0
+Compilation succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time elapsed 00:00:15.8686326
+
+Done. To undo this action, use 'dotnet ef migrations remove'
+
+R:\GitProjects\TheWorld\src\TheWorld>dotnet ef database update
+Project TheWorld (.NETCoreApp,Version=v1.0) will be compiled because Input items added from last build
+Compiling TheWorld for .NETCoreApp,Version=v1.0
+Compilation succeeded.
+    0 Warning(s)
+    0 Error(s)
+Time elapsed 00:00:15.2178576
+
+Done.
