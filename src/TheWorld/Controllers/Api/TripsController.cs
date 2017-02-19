@@ -29,7 +29,7 @@ namespace TheWorld.Controllers.Api
         {
             try
             {
-                var trips = _repository.GetTripsByUserName(this.User.Identity.Name);
+                var trips = _repository.GetTripsByUserName(this.User.Identity.Name).OrderBy(t => t.Name);
                 return Ok(Mapper.Map<IEnumerable<TripViewModel>>(trips));
             }
             catch (Exception ex)
